@@ -1,0 +1,19 @@
+# Nanotec stepper motor config file
+
+defaults:
+  ### 301
+  eds_file: "~nanotec_can/src/test0/params/C5-E-1-09.eds"
+  ### 402
+  motor_allocator: canopen::Motor402::Allocator
+  motor_layer: settings passed to motor later (plugin-specific)
+    switching_state: 5  # Enables the operation mode (I think)
+  pos_to_device: "rint(rad2deg(pos)/0.18)"
+  pos_from_device: "deg2rad(obj6064)*0.18"
+  vel_to_device: "rint(rad2deg(vel)/0.18)" # Need to double check unit conversion for the velocities
+  vel_from_device: "deg2rad(obj606C)*0.18"
+  eff_to_device: "rint(eff)"
+  eff_from_device: "0"
+
+nodes:
+   nanotec_stepper:
+     id: 1

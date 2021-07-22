@@ -1,0 +1,4 @@
+nanotec_stepper_joint_position_controller:
+type: position_controllers/JointPositionController
+joint: nanotec_stepper
+required_drive_mode: 1

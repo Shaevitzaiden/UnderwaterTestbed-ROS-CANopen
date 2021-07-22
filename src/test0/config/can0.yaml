@@ -1,0 +1,11 @@
+# Nanotec stepper motor config file
+bus:    
+  device: can0 #socketcan network    
+  # loopback: false # socket should loop back messages    
+  # driver_plugin: can::SocketCANInterface    
+  master_allocator: canopen::SimpleMaster::Allocator
+sync:    
+  interval_ms: 0 # set to 0 to disable    
+  overlfow: 0    
+  # heartbeat:      
+  # rate: 20
